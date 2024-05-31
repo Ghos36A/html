@@ -138,3 +138,32 @@
     <div id="xmlOutput"></div>
 </body>
 </html>
+
+
+<div class="input-table" align="center">
+            <table class="contract-table" cellspacing="2" oraList="cmRecordIdGroup/mappedDataArea/contracts" onResize="if (this.clientWidth > this.parentNode.clientWidth) { this.parentNode.className += ' oraGridDivScroll';};">
+              <thead>
+                  <tr align="center">
+                      <th nowrap oraLabel="contractId" class="oraGridColumnHeader"></td>
+                      <th nowrap oraLabel="saId" style="text-align: center;" class="oraGridColumnHeader"></td>
+                      <th nowrap oraLabel="assignedCertificates" class="oraGridColumnHeader"></td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td oraField="contractId" class="oraNormal oraDisplayCell" id="contractIdData"></td>
+                          <td oraField="saId" class="oraNormal oraDisplayCell" id="saIdData"><span oraField="saId" oraType="fkRef:true; info:true; context:true; navigation:true;"></span></td>
+                          <td class="oraNormal oraDisplayCell" id="inputData"><input class="oraInput" oraField="assignedCertificates" style="width: 150px;"></td>
+                      </tr>
+                </tbody>
+                
+            </table>              
+        </div>
+        <div class="buttons" align="center">
+            <tr>
+                <td>
+                    <input onClick="saveAllData();" oraMdLabel="SAVE_BTN_LBL" class="oraButton" type="button">
+                    <input onClick="oraSubmitMap('CANCEL',false);" oraMdLabel="CANCEL_LBL" class="oraButton" type="button">
+                </td>
+            </tr>
+        </div>
